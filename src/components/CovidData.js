@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css';
 import './Component.css';
+import StateChart from './StateChart';
 
 class CovidData extends Component {
     state = {
@@ -60,7 +61,8 @@ class CovidData extends Component {
         const url = `https://covidtracking.com/api/v1/states/current.json`
         const stateData = await this.loadData(url);
         this.setState({
-            stateData
+            stateData,
+            countryChartData: this.getCountryData()
         })
         this.getCountryData();
     }
@@ -89,6 +91,7 @@ class CovidData extends Component {
                 <h5>Positive Test: {data.positive}</h5>
                 <h5>Total Deaths: {data.death}</h5>
                 <h5>Total Cases: {data.total}</h5>
+                <StateChart />
             </div>
         )
     }
