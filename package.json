@@ -9,6 +9,7 @@
     "chart.js": "^2.9.3",
     "moment": "^2.24.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
     "react-iframe": "^1.8.0",
@@ -16,7 +17,9 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-select": "^3.1.0",
-    "redux": "^4.0.5"
+    "react-twitter-embed": "^3.0.3",
+    "redux": "^4.0.5",
+    "twit": "^2.2.11"
   },
   "scripts": {
     "start": "react-scripts start",
