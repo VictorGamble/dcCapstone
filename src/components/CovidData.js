@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css';
 import './Component.css';
-import StateTable from './StateTable';
+import CountryTable from './CountryTable';
 
 class CovidData extends Component {
     state = {
@@ -91,7 +91,7 @@ class CovidData extends Component {
                 <h5>Positive Test: {data.positive}</h5>
                 <h5>Total Deaths: {data.death}</h5>
                 <h5>Total Cases: {data.total}</h5>
-                <StateTable />
+                <CountryTable />
             </div>
         )
     }
