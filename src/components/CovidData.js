@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../App.css';
 import './Component.css';
 import { LineChart, Line } from 'recharts';
+import CountryData from "./CountryData";
 
 class CovidData extends Component {
     state = {
@@ -129,6 +130,7 @@ class CovidData extends Component {
                 <LineChart width={400} height={400} data={newData}>
                     <Line type="monotone" dataKey="uv" stroke="#8884d8" />
                 </LineChart>
+                <CountryData/>
                 </div>
             </div>
         )
