@@ -18,7 +18,7 @@ class StateTable extends Component {
     }
 
     async componentDidMount() {
-        const url = `https://covidtracking.com/api/v1/states/current.json`
+        const url = `https://coronavirus-19-api.herokuapp.com/countries`
         const stateData = await this.loadData(url);
         const data =  stateData.map(state => state)
         console.log("Data is =>", data);
@@ -32,18 +32,18 @@ class StateTable extends Component {
     render() {
         const { data } = this.state;
         return (
-            <div>
-<table class="table">
-  <thead class="thead-dark">
+            <div className="item">
+<table className="table">
+  <thead className="thead-dark">
     <tr>
-      <th scope="col">State</th>
+      <th scope="col">Country</th>
       <th scope="col">Recovered</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-        <td>{data.map(state => <tr>{state.state}</tr>)}</td>
-        <td>{data.map(state => <tr>{state.recovered}</tr>)}</td>
+        <td>{data.map(country => <tr>{country.country}<hr/></tr>)}</td>
+        <td>{data.map(country => <tr>{country.recovered}<hr/></tr>)}</td>
     </tr>
   </tbody>
 </table>
